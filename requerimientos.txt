@@ -1,0 +1,21 @@
+JUGADORES
+	-Numero
+	-Nombre
+
+EQUIPOS	
+	-JUGADOR
+
+*TRANFERENCIAS
+	-CAMBIOS
+*ROL DE JUEGOS
+	-JORNADAS
+*TABLA DE PUNTOS
+	-PJ
+	-PG
+	-PP
+	-PE
+	-GA	
+	-GC
+	-PTS
+	-
+	
