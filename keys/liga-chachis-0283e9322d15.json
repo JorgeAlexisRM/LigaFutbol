@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "liga-chachis",
+  "private_key_id": "0283e9322d15fc5611181008e853c612ce8b5a3f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCWyFP047Yqbxgd\nkI6GoyVRzSzGDEBgb4IATMFsvJ8wtO+6HvUpy4DFB2c+5UZnyr59Mhs7Bw0FbUlS\nmK1Gx/LEboVz1f8w2mc8n3SGOwiMt8ov697zjohvaG9/6IPConVIKEnP622IKaZ0\nmuiNRW8pX42wULReeh9403DetqcefRayw+FLEjmx40LkbO9eW4Za+RmS5aDACBow\nWbrctzlbHr2k3t1hpPADHWcZogPHEXOGYFhB0N1BDEFy94VTtQk0mV4uXWF091M5\noD01iJ/efbH3lv5iQVZM9vusKO9OWfpJVCqRlfLgzTWnk73QzOWObrFVvvLyZXIc\nO49HjmnFAgMBAAECgf8R5uWv3T1r8o64X92ln85ZuirQCK/evmSNcjW5BOA6NYoR\nidY/5PESJeKWdT9fHHAr2uW9lC96UWAm33c+uJshLGegTByqdam5XhzvZvZhJc57\nbjL0Kn+kSu6Q/Oa0Brhky8Er53nd8VfwoZW2LIYf9xy80WAMHx9th5TbG4KljZpu\nyoedQHuti55wkD7j3LNMs+kXMWCb4y/MADgqX6skQyLwaxblm2fd7LqQO6aiIxwR\nwakWg0IroqSIalDrEuDRQsmvN2wqZBjKEm1EcHuoWeePHmGCkRhPHNcSScdCzjoe\nF8yWPnZr9JHc9pyfwmBOwB+Jia9wpLWOB9s+XakCgYEAxPttwxJyep0y/K3MWaB7\nlbI0H/3CzGznP6mfYJZ+acm91pdgYdHmrnJw52aFIdt+DN9sGU7XDuVfZlp8b53p\n/SCHvARTLirTBkCjr8Wt/bobq92DZkEaAjNvI+W3soh5DywSqaqFIe4EYtw4E4KX\nhLHP+EimVcBNaBXNxghV4WkCgYEAw/VhHJKzWAvvpd8HjBqNowjylkWocWwSUYjA\nLuZdVfriZaQUblkwDmkyUH9fYD8hr3+YbQv2R5TDaoTllEDBWu8Fj2JvxG8wXu7s\nLpHIcBZFcD/nA2lBhzjX8rnBbdYlf3S77EhFKQcOHKS3+b5Vlue/bdkssakIirnQ\nFPR/3f0CgYBUzstbCT4wfC3PjCRHEkkjEi5O97o+uUR2rFjqBOE4Opt5IINmmjBv\nOuZROlpnUVDbyfWIj+EXkLmaH6sjgyGS0caetF37qoRgVMQkkT9v1gjD3gMMq0q/\nV9Wp5uVIAGnelmMSmU/oY8mPprCd9cO2ZbfcdarnkHvDLGADuuL+wQKBgA54BMae\nUl2y6+v8bss6frDGDVtpI0nUp/mbNk2ANu4NS0AkAFoxfanivJNTBFDP+IXDzxZm\nJrYcVt17mJP8wAod0fRHWWdQqmqoC4pYu0sDafci0MTgtbTtToyeiJi6kiQ6E1Ib\n9/dSjQkyZF8tXZZ54BmVSoaHq5jKpYGWmAZlAoGAdWlxuSM2/sPkddyqR/GWpKdX\nOK7vkhVZazpAWPJSn5ZaaoDPj8kyRG/0HLzz5Bmw4LO2T4ZB/JVIhDXGlgC6eemt\ng24XaojW6Ke/z7jgiySgft+44FKEafPm1OWHlQ/o8HvO1N5Zcsdv0TSm6jUwS9qj\naCmge+YqK8uku1SrL60=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-pqm0g@liga-chachis.iam.gserviceaccount.com",
+  "client_id": "109528462307440793941",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-pqm0g%40liga-chachis.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
