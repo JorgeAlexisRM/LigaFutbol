@@ -1,14 +1,8 @@
 <?php
 
-require 'vendor/autoload.php';
-
-use Google\Cloud\Firestore\FirestoreClient;
-	
 # Conexion a la base de datos #
 function conexion(){
-    $db = new FirestoreClient([
-        'projectId' => "liga-chachis",
-    ]);
+    $db = new PDO('mysql:host=localhost;dbname=ligaChachis', 'root', '');
     return $db;
 }
 /*
