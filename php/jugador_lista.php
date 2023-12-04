@@ -2,33 +2,25 @@
     //Se crea la conexion
     $db = conexion();
     //Se hace referencia a la coleccion a consular
-    $usersRef = $db->collection('jugadores');
-    //Referencia al documento a consultar
-    $docRef = $usersRef->document('K2rokcGftLIFMk7c4TFt');
-    //Recupéra todo los datos del coumento
-    $snapshot = $docRef->snapshot();
-    //Obtiene solo el nombre
-    $nombre = $snapshot['nombre'];
-
-    //Imprime solo un atrubuto nombre
-    printf('Document data:' . PHP_EOL);
-    print((string) $nombre);
-    //Imprime toda la cadena
-    printf('Document data:' . PHP_EOL);
-    print_r($snapshot->data());
-
-    /*
-    $snapshot = $usersRef->documents();
-    foreach ($snapshot as $user) {
-        echo '<p>'.$user['nombre'].'<p>';
-        echo '<p>'.$user['apellido'].'<p>';
-        echo '<p>'.$user['edad'].'<p>';
-        echo '<p>'.$user['posicion'].'<p>';
-        *//*
-        printf('Nombre: %s' . PHP_EOL, $user['nombre']);
-        printf('Apellido: %s' . PHP_EOL, $user['apellido']);
-        printf('Edad: %s' . PHP_EOL, $user['edad']);
-        printf('Posicion: %s' . PHP_EOL, $user['posicion']);
-        printf(PHP_EOL);*/
-    //}
-    printf('Retrieved and printed out all documents from the users collection.' . PHP_EOL);
+    $jugadoresRef = $db->collection('jugadores');
+    $equipoRef = $db->collection('equipos');
+    //Capturar los documentos
+    $snapshot = $jugadoresRef->documents();
+    $snapshotE = $equipoRef->documents();
+    //Ciclo para recorrer la colecccion
+    foreach ($snapshot as $jugador) {
+        $idRef = $jugador['equipo'] ;
+        echo '<p>Nombre: '.$jugador['nombre'].'</p>';
+        echo '<p>Apellido: '.$jugador['apellido'].'</p>';
+        echo '<p>Edad: '.$jugador['edad'].'</p>';
+        echo '<p>Posicion: '.$jugador['posicion'].'</p>';
+        foreach ($snapshotE as $equipo){
+            $idConsulta = $equipo->id();
+            if($idRef===$idConsulta){
+                echo '<p>Equipo: '.$equipo['nombre'].'</p>';
+                break;
+            }else{
+                echo '<p>Equipo: ---</p>';
+            }
+        }
+    }
