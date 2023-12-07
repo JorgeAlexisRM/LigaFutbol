@@ -2,7 +2,7 @@
 
 # Conexion a la base de datos #
 function conexion(){
-    $db = new PDO('mysql:host=localhost;dbname=ligaChachis', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=ligachachis', 'root', '');
     return $db;
 }
 /*

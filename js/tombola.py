@@ -10,6 +10,12 @@
 
 nEquipos = 10
 
+if nEquipos%2==0:
+    print("Es par")
+else:
+    print("es impar")
+    nEquipos+=1
+
 equiposA=[]
 equiposB=[]
 
