@@ -54,8 +54,8 @@
 		foreach($datos as $rows){
 			$tabla.='
 				<article class="media">
-			        <figure class="media-left">
-			            <p class="image is-64x64">';
+					<figure class="media-left">
+			        	<p class="image is-64x64">';
 			            if(is_file("./img/producto/".$rows['producto_foto'])){
 			            	$tabla.='<img src="./img/producto/'.$rows['producto_foto'].'">';
 			            }else{
