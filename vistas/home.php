@@ -1,28 +1,4 @@
 
-  <!-- Contenido del encabezado -->
-  <header>
-    <img class="logo" src="/img/Laliga.webp" alt="Logo de la página">
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Estadisticas</a></li>
-          <li><a href="/vistas/jugador_list.php">jugadores</a></li>
-          <li><a href="#">Partidos</a></li>
-          <li><a href="#">Tabla de Posiciones</a></li>
-            <button onclick="window.location.href='/vistas/login.php'">
-              <div class="text">
-                <span>Registrate</span>
-              </div>
-              <div class="clone">
-                <a>Registrate</a>
-              </div>
-              <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </button> 
-        </ul>
-      </nav>
-  </header>
   
   <!-- Contenido principal de la página -->
   <main>
@@ -35,21 +11,21 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/img/economia.jpeg" class="d-block w-50" alt="...">
+          <img src="img/economia.jpeg" class="d-block w-50" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Mas y Promotores llegan a la Liga</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="/img/consagra.jpeg" class="d-block w-50" alt="...">
+          <img src="img/consagra.jpeg" class="d-block w-50" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Nuevos Equipos se Crean</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="/img/La liga.jpeg" class="d-block w-50" alt="...">
+          <img src="img/La liga.jpeg" class="d-block w-50" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Nota Especial de la Liga</h5>
             <p>Some representative placeholder content for the third slide.</p>
@@ -75,7 +51,7 @@
             <h3>Titular de la Noticia 1</h3>
           </div>
           <div class="image-right">
-            <img src="/img/la liga.jpeg" alt="Logo de la página">
+            <img src="img/la liga.jpeg" alt="Logo de la página">
           </div>
         </div>
         <!-- Tarjeta de Noticia 2 -->
@@ -84,7 +60,7 @@
             <h3>Titular de la Noticia 1</h3>
           </div>
           <div class="image-right">
-            <img src="/img/la liga.jpeg" alt="Logo de la página">
+            <img src="img/la liga.jpeg" alt="Logo de la página">
           </div>
         </div>
         <!-- Tarjeta de Noticia 3 -->
@@ -93,7 +69,7 @@
             <h3>Titular de la Noticia 1</h3>
           </div>
           <div class="image-right">
-            <img src="/img/la liga.jpeg" alt="Logo de la página">
+            <img src="img/la liga.jpeg" alt="Logo de la página">
           </div>
         </div>
       </div>
@@ -189,57 +165,41 @@
       <div class="patrocinadores">
         <!--Botones de los patrocinadores -->
         <div class="patrocinador">
-          <img src="/img/Microsoft.png" alt="Patrocinador 1" class="patrocinador">
+          <img src="img/Microsoft.png" alt="Patrocinador 1" class="patrocinador">
           <h4>Partner Tecnológico</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/puma.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/puma.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Balón Oficial</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/gol-ball.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/gol-ball.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Licencia Global</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/sorare.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/sorare.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Licencia Global</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/avery.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/avery.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Licencia Global</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/legenst.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/legenst.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Legends Experience</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/fcEsports.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/fcEsports.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Partner Principal</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/fanatics.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/fanatics.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Licencia Global</h4>
         </div>
         <div class="patrocinador">
-          <img src="/img/golazos.png" alt="Patrocinador 2" class="patrocinador">
+          <img src="img/golazos.png" alt="Patrocinador 2" class="patrocinador">
           <h4>Licencia Global</h4>
         </div>
       </div>
     </div>
   </main>
-  <!-- Sección del Footer -->
-  <footer>
-    <!-- Contenido del pie de página -->
-    <div id="container">
-      <p>Derechos de autor &copy; 2022 - Mi Sitio Web</p>
-      <img src="/img/Laliga.webp" alt="Logo de la página">
-      <a href="#">Informacion Legal</a>
-      <a href="#">Politica de Cookies</a>
-      <a href="#">Politica de Privacidad</a>
-      <p href="#">Email: Laliga@gmail.liga.com</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
