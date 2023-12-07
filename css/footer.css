@@ -1,0 +1,39 @@
+footer {
+    background-color: #76a6b1;
+    color: #0b0707;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+}
+
+#container {
+    display: flex;
+    width: 1268;
+    height: 60px;
+    justify-content: space-between;
+    gap: 30px;
+}
+footer {
+    border-top: 1px solid #080404;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  main {
+    border-top: 1px solid #080505;
+    padding-top: 20px;
+  }
+
+  .sociales-y-patrocinadores{
+    border-top: 1px solid #080505;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .latest-news{
+    border-top: 1px solid #080505;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
