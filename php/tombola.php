@@ -51,6 +51,7 @@ $j = 0;
 $equipoAux = [];
 while ($n < ($nEquipos - 1)) {
     $partidos.='<h1 class="titulo"> Jornada '  . ($n + 1) . '</h1>';
+
     while ($i < ($nEquipos / 2)) {
 
         $A=$equiposA[$i];

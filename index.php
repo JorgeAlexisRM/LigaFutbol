@@ -3,18 +3,12 @@
 <html>
     <head>
         <?php
+            include "./inc/head.php";
 
-            if(is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="home" && $_GET['vista']!="404"){
+            if(isset($_GET['vista']) && is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="home" && $_GET['vista']!=""){
 
-                include "./inc/head.php";
                 include "./inc/".$_GET['vista'].".php";
 
-            }else{
-                if($_GET['vista']=="home"){
-                    include "./inc/head.php";
-                }else{
-                    include "./inc/head.php"; 
-                }
             }
 
         ?>
