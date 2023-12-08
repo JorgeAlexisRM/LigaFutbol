@@ -4,12 +4,13 @@
     <img class="logo" src="img/Laliga.webp" alt="Logo de la página">
       <nav>
         <ul class="menu">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Estadisticas</a></li>
-          <li><a href="vistas/jugador_list.php">jugadores</a></li>
-          <li><a href="#">Partidos</a></li>
+          <li><a href="index.php?vista=home">Inicio</a></li>
+          <li><a href="index.php?vista=equipos_list">Equipos</a></li>
+          <li><a href="index.php?vista=jugador_list">Jugadores</a></li>
+          <li><a href="index.php?vista=partidos_list">Partidos</a></li>
+          <li><a href="index.php?vista=perfil">Perfil</a></li>
           <li><a href="#">Tabla de Posiciones</a></li>
-            <button onclick="window.location.href='/vistas/login.php'">
+            <button onclick="window.location.href='index.php?vista=login'">
               <div class="text">
                 <span>Registrate</span>
               </div>
