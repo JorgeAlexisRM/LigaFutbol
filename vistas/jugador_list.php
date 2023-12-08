@@ -4,9 +4,9 @@
 
 <div>
     <?php
-        require_once "../php/main.php";
+        require_once "./php/main.php";
 
         # Paginador categoria #
-        require_once "../php/jugador_lista.php";
+        require_once "./php/jugador_lista.php";
     ?>
 </div>

@@ -48,7 +48,7 @@ function conexion(){
 		return $cadena;
 	}
 
-
+*/
 	# Funcion renombrar fotos #
 	function renombrar_fotos($nombre){
 		$nombre=str_ireplace(" ", "_", $nombre);
@@ -62,7 +62,7 @@ function conexion(){
 		return $nombre;
 	}
 
-
+/*
 	# Funcion paginador de tablas #
 	function paginador_tablas($pagina,$Npaginas,$url,$botones){
 		$tabla='<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">';
