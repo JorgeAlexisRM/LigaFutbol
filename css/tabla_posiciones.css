@@ -1,24 +1,65 @@
-/* Estilos CSS para la tabla */
-table {
+.cuerpoTabla{
+    background-image: url('/img/campo.jpg');
+    background-size: cover; 
+    background-position: center;
+
+}
+.table-container {
+    margin: 0 auto; 
+    width: 80%; 
+    border: 1px solid #ddd;
+}
+
+.tbody {
     border-collapse: collapse;
     width: 100%;
     font-family: Arial, sans-serif;
+    color: #ebe2e2;;
+    background-color: #383636;
+}
+.tbody1 {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #ddd; 
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: none;
     padding: 8px;
     text-align: center;
 }
 
+th:nth-child(1), td:nth-child(1) {
+    width: 30px; 
+}
+
+th:nth-child(2), td:nth-child(2) {
+    display: flex;
+    justify-content: left;
+}
+
+tr {
+    border-bottom: 1px solid #ddd; 
+    color: #ebe2e2;;
+    background-color: #383636;
+}
+
+tr:last-child {
+    border-bottom: none; 
+}
+
 th {
-    background-color: #f2f2f2;
+    color: #ebe2e2;;
+    background-color: #383636;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #383636;
+    color: #f6eeee;
 }
 
 tr:hover {
-    background-color: #f2f2f2;
+    background-color: #5b5858;
+    color: #ded8d8;
 }

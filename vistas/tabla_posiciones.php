@@ -3,8 +3,7 @@
 <head>
     <title>Tabla de Equipos</title>
 </head>
-<body>
-    <h1>Torneo de Fútbol</h1>
+<body class="cuerpoTabla">
     <?php
         require_once "./php/main.php";
 
