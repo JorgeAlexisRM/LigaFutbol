@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="css/partidos_list.css">
+<link rel="stylesheet" href="./css/partidos_list.css">

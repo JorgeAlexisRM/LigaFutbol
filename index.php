@@ -8,9 +8,7 @@
             if(isset($_GET['vista']) && is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="home" && $_GET['vista']!=""){
 
                 include "./inc/".$_GET['vista'].".php";
-
             }
-
         ?>
     </head>
     <body>

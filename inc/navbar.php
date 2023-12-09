@@ -9,7 +9,7 @@
           <li><a href="index.php?vista=jugador_list">Jugadores</a></li>
           <li><a href="index.php?vista=partidos_list">Partidos</a></li>
           <li><a href="index.php?vista=perfil">Perfil</a></li>
-          <li><a href="#">Tabla de Posiciones</a></li>
+          <li><a href="index.php?vista=tabla_posiciones">Tabla de Posiciones</a></li>
             <button onclick="window.location.href='index.php?vista=login'">
               <div class="text">
                 <span>Registrate</span>

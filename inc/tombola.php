@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="css/tombola.css"
+<link rel="stylesheet" href="./css/tombola.css"

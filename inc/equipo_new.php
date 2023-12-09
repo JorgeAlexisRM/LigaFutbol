@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="css/equipo_new.css">
+<link rel="stylesheet" href="./css/equipo_new.css">
