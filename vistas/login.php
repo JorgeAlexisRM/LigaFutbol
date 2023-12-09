@@ -6,9 +6,11 @@
   </div>
 </div>
 
+<div class="form-rest"></div>
+
 <div class="container">
   <div>
-    <form id="registro-form" class="hidden">
+    <form id="registro-form" class="hidden" method="POST" action="./php/usuario_guardar.php" autocomplete="off">
       <div class="input-group">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre">
@@ -18,12 +20,16 @@
         <input type="text" id="apellido" name="apellido">
       </div>
       <div class="input-group">
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
       </div>
       <div class="input-group">
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password">
+      </div>
+      <div class="input-group">
+        <label for="password2">Repite la contraseña:</label>
+        <input type="password" id="password2" name="password2">
       </div>
       <div class="radio-group">
         <label>
@@ -36,16 +42,15 @@
         </label>
       </div>
       <button type="submit">Registrarse</button>
-
     </form>
     
-      <button onclick="window.location.href='/vistas/index.php'">Inicio</button>
+      <button onclick="window.location.href='index.php?vista=home'">Inicio</button>
   
   </div>
 
-  <form id="login-form" class="hidden">
+  <form id="login-form" class="hidden" method="POST" action="">
     <div class="input-group">
-      <label for="username">Usuario o Correo Electrónico:</label>
+      <label for="username">Usuario:</label>
       <input type="text" id="username" name="username">
     </div>
     <div class="input-group">
@@ -53,7 +58,14 @@
       <input type="password" id="password" name="password">
     </div>
     <button type="submit">Iniciar Sesión</button>
+
+    <?php
+			if(isset($_POST['username']) && isset($_POST['password'])){
+				require_once "./php/main.php";
+				require_once "./php/iniciar_sesion.php";
+			}
+		?>
+
   </form>
   
 </div>
-<script src="js/scripts.js"></script>
