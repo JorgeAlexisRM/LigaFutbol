@@ -1,11 +1,11 @@
 <?php
 
-# Conexion a la base de datos #
-function conexion(){
-    $db = new PDO('mysql:host=localhost;dbname=ligachachis', 'root', '');
-    return $db;
-}
-/*
+	# Conexion a la base de datos #
+	function conexion(){
+		$db = new PDO('mysql:host=localhost;dbname=ligachachis', 'root', '');
+		return $db;
+	}
+
 
 	# Verificar datos #
 	function verificar_datos($filtro,$cadena){
@@ -16,7 +16,7 @@ function conexion(){
         }
 	}
 
-
+/*
 	# Limpiar cadenas de texto #
 	function limpiar_cadena($cadena){
 		$cadena=trim($cadena);

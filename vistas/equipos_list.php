@@ -11,8 +11,13 @@
     ?>
 </div>
 
-<form class="jornada" method="POST" action="index.php?vista=tombola">
-    <button type="submit">
-        Generar Jornada
-    </button>
-</form>
+<?php 
+    if (isset($_SESSION['usuario'])&&($_SESSION['rol']=='entrenador')) {
+        echo '<form class="jornada" method="POST" action="index.php?vista=tombola">
+            <button type="submit">
+                Generar Jornada
+            </button>
+            </form>
+        ';
+    }
+?>
