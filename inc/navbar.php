@@ -8,12 +8,12 @@
           <li><a href="index.php?vista=equipos_list">Equipos</a></li>
           <li><a href="index.php?vista=jugador_list">Jugadores</a></li>
           <li><a href="index.php?vista=partidos_list">Partidos</a></li>
+          <li><a href="index.php?vista=tabla_posiciones">Tabla de Posiciones</a></li>
           <?php 
             if (isset($_SESSION['usuario'])) {
               echo '<li><a href="index.php?vista=perfil">Perfil</a></li>';
             }
           ?>
-          <li><a href="#">Tabla de Posiciones</a></li>
           <li>
             <?php 
               if (isset($_SESSION['usuario'])) {
@@ -33,7 +33,6 @@
               }
             ?>
           </li>
-          
         </ul>
       </nav>
   </header>
