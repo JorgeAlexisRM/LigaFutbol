@@ -59,6 +59,17 @@
     		$_SESSION['usuario']=$check_user['username'];
             $_SESSION['rol']=$check_user['rol'];
 
+            $entrenador=$check_user['idUsuario'];
+
+            $check_equipo=conexion();
+            $check_equipo=$check_equipo->query("SELECT * FROM equipos WHERE idEntrenador='$entrenador'");
+            $check_equipo->rowCount();
+            if($check_equipo->rowCount()===1){
+                $check_equipo=$check_equipo->fetch();
+                $_SESSION['equipo']=$check_equipo['nombre'];
+                $_SESSION['idEquipo']=$check_equipo['idEquipo'];
+            }
+
     		if(headers_sent()){
 				echo "<script> window.location.href='index.php?vista=home'; </script>";
 			}else{
@@ -82,3 +93,4 @@
         ';
     }
     $check_user=null;
+    $check_equipo=null;

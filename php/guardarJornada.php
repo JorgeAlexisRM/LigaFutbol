@@ -106,3 +106,31 @@ if($guardar_partido->rowCount()>0){
     }
 
 $guardar_partido=null;
+
+$codigo = uniqid("torneo");
+$torneo = conexion();
+$torneo=$torneo->prepare("INSERT INTO torneos(idTorneo,enjuego,campeon) values (:idTorneo,:enjuego,:campeon)");
+$marcadores=[
+    ":idTorneo"=>$codigo,
+    ":enjuego"=>0,
+    ":campeon"=>NULL
+];
+
+if($torneo->execute($marcadores)){
+    echo '
+        <div class="notification is-info is-light">
+            <strong>¡TORNEO CREADO!</strong><br>
+            El torneo se creo con exito
+        </div>
+    ';
+    }else{
+
+    echo '
+        <div class="notification is-danger is-light">
+            <strong>¡Ocurrio un error inesperado!</strong><br>
+            No se pudo crear el torneo, por favor intente nuevamente
+        </div>
+    ';
+};
+
+$torneo=null;
