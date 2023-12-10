@@ -1,17 +1,16 @@
 
   <!-- Contenido del encabezado -->
   <header>
-    <img class="logo" src="img/Laliga.webp" alt="Logo de la página">
+    <img class="logo" src="../img/Laliga.webp" alt="Logo de la página">
       <nav>
         <ul class="menu">
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Estadisticas</a></li>
-          <li><a href="vistas/jugador_list.php">jugadores</a></li>
+          <li><a href="../vistas/jugador_list.php">jugadores</a></li>
           <li><a href="#">Partidos</a></li>
           <li><a href="#">Tabla de Posiciones</a></li>
             <button onclick="window.location.href='/vistas/login.php'">
               <div class="text">
-                <span>Registrate</span>
               </div>
               <div class="clone">
                 <a>Registrate</a>
