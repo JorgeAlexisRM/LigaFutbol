@@ -1,12 +1,25 @@
 <div>
-    <h1>Jugador</h1>
+    <h1 class="titulo">Lista de Jugadores</h1>
 </div>
-
-<div>
-<?php
-        require_once "./php/main.php";
-
-        # Paginador categoria #
-        require_once "./php/jugador_lista.php";
-    ?>
+<div class="contenedor">
+    <div class="izquierda">
+        <?php
+            require_once "./php/main.php";
+            require_once './php/jugador_lista.php'; 
+        ?>
+    </div>
+    <div class="derecha">
+        <form method="post">
+            <div class="search">
+                <input placeholder="Ingresa el nombre..." type="text" id="nombre" name="nombre">
+                <button type="submit" value="Buscar" name="busqueda">Buscar Jugador</button>
+            </div>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["busqueda"])) {
+                require_once './php/jugador_busqueda.php';
+            }
+        ?>
+        </form>
+        <br>
+    </div>
 </div>
