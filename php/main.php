@@ -1,11 +1,11 @@
 <?php
 
-# Conexion a la base de datos #
-function conexion(){
-    $db = new PDO('mysql:host=localhost;dbname=ligachachis', 'root', '');
-    return $db;
-}
-/*
+	# Conexion a la base de datos #
+	function conexion(){
+		$db = new PDO('mysql:host=localhost;dbname=ligachachis', 'root', '');
+		return $db;
+	}
+
 
 	# Verificar datos #
 	function verificar_datos($filtro,$cadena){
@@ -16,7 +16,7 @@ function conexion(){
         }
 	}
 
-
+/*
 	# Limpiar cadenas de texto #
 	function limpiar_cadena($cadena){
 		$cadena=trim($cadena);
@@ -48,7 +48,7 @@ function conexion(){
 		return $cadena;
 	}
 
-
+*/
 	# Funcion renombrar fotos #
 	function renombrar_fotos($nombre){
 		$nombre=str_ireplace(" ", "_", $nombre);
@@ -62,7 +62,7 @@ function conexion(){
 		return $nombre;
 	}
 
-
+/*
 	# Funcion paginador de tablas #
 	function paginador_tablas($pagina,$Npaginas,$url,$botones){
 		$tabla='<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">';

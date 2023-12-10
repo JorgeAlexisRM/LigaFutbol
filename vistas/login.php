@@ -1,73 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
-  <link rel="stylesheet" href="/css/login.css">
-</head>
-
-<body>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <h2>¿Estás registrado?</h2>
-      <button id="yesbtn">Sí, estoy registrado</button>
-      <button id="nobtn">No, quiero registrarme</button>
-    </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <h2>¿Estás registrado?</h2>
+    <button id="yesbtn">Sí, estoy registrado</button>
+    <button id="nobtn">No, quiero registrarme</button>
   </div>
+</div>
 
-  <div class="container">
-    <div>
-      <form id="registro-form" class="hidden">
-        <div class="input-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre">
-        </div>
-        <div class="input-group">
-          <label for="apellido">Apellido:</label>
-          <input type="text" id="apellido" name="apellido">
-        </div>
-        <div class="input-group">
-          <label for="correo">Correo Electrónico:</label>
-          <input type="email" id="correo" name="correo">
-        </div>
-        <div class="input-group">
-          <label for="password">Contraseña:</label>
-          <input type="password" id="password" name="password">
-        </div>
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="tipo" value="jugador">
-            Soy Jugador
-          </label>
-          <label>
-            <input type="radio" name="tipo" value="entrenador">
-            Soy Entrenador
-          </label>
-        </div>
-        <button type="submit">Registrarse</button>
+<div class="form-rest"></div>
 
-      </form>
-      
-        <button onclick="window.location.href='/vistas/index.php'">Inicio</button>
-    
-    </div>
-
-    <form id="login-form" class="hidden">
+<div class="container">
+  <div>
+    <form id="registro-form" class="hidden" method="POST" action="./php/usuario_guardar.php" autocomplete="off">
       <div class="input-group">
-        <label for="username">Usuario o Correo Electrónico:</label>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+      <div class="input-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido">
+      </div>
+      <div class="input-group">
+        <label for="username">Username:</label>
         <input type="text" id="username" name="username">
       </div>
       <div class="input-group">
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password">
       </div>
-      <button type="submit">Iniciar Sesión</button>
+      <div class="input-group">
+        <label for="password2">Repite la contraseña:</label>
+        <input type="password" id="password2" name="password2">
+      </div>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="tipo" value="jugador">
+          Soy Jugador
+        </label>
+        <label>
+          <input type="radio" name="tipo" value="entrenador">
+          Soy Entrenador
+        </label>
+      </div>
+      <button type="submit">Registrarse</button>
     </form>
     
+      <button onclick="window.location.href='index.php?vista=home'">Inicio</button>
+  
   </div>
-  <script src="/js/scripts.js"></script>
-</body>
 
-</html>
+  <form id="login-form" class="hidden" method="POST" action="">
+    <div class="input-group">
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div class="input-group">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <button type="submit">Iniciar Sesión</button>
+
+    <?php
+			if(isset($_POST['username']) && isset($_POST['password'])){
+				require_once "./php/main.php";
+				require_once "./php/iniciar_sesion.php";
+			}
+		?>
+
+  </form>
+  
+</div>
