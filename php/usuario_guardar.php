@@ -129,3 +129,40 @@
         ';
     }
     $guardar_usuario=null;
+
+    if($rol=='jugador'){
+        
+        /*== Guardando datos ==*/
+        $guardar_jugador=conexion();
+        $guardar_jugador=$guardar_jugador->prepare("INSERT INTO jugadores(nombre,apellido,edad,equipo,camiseta,posicion,idJugador) VALUES(:nombre,:apellido,:edad,:equipo,:camiseta,:posicion,:idJugador)");
+
+        $marcadores=[
+            ":nombre"=>$nombre,
+            ":apellido"=>$apellido,
+            ":edad"=>0,
+            ":equipo"=>NULL,
+            ":camiseta"=>0,
+            ":posicion"=>NULL,
+            ":idJugador"=>$codigo
+        ];
+
+        $guardar_jugador->execute($marcadores);
+
+        if($guardar_jugador->rowCount()==1){
+            echo '
+                <div class="notification is-info is-light">
+                    <strong>¡JUGADOR REGISTRADO!</strong><br>
+                    El jugador se registro con exito
+                    Actualice sus datos en su perfil.
+                </div>
+            ';
+        }else{
+            echo '
+                <div class="notification is-danger is-light">
+                    <strong>¡Ocurrio un error inesperado!</strong><br>
+                    No se pudo registrar el jugador, por favor intente nuevamente
+                </div>
+            ';
+        }
+        $guardar_jugador=null;
+    }

@@ -59,15 +59,32 @@
     		$_SESSION['usuario']=$check_user['username'];
             $_SESSION['rol']=$check_user['rol'];
 
-            $entrenador=$check_user['idUsuario'];
+            $idUsuario=$check_user['idUsuario'];
 
             $check_equipo=conexion();
-            $check_equipo=$check_equipo->query("SELECT * FROM equipos WHERE idEntrenador='$entrenador'");
+            $check_equipo=$check_equipo->query("SELECT * FROM equipos WHERE idEntrenador='$idUsuario'");
             $check_equipo->rowCount();
             if($check_equipo->rowCount()===1){
                 $check_equipo=$check_equipo->fetch();
                 $_SESSION['equipo']=$check_equipo['nombre'];
                 $_SESSION['idEquipo']=$check_equipo['idEquipo'];
+            }
+
+            $check_jugador=conexion();
+            $check_jugador=$check_jugador->query("SELECT * FROM jugadores WHERE idJugador='$idUsuario'");
+            $check_jugador->rowCount();
+            if($check_jugador->rowCount()===1){
+                $check_jugador=$check_jugador->fetch();
+                $_SESSION['posicion']=$check_jugador['posicion'];
+                $_SESSION['camiseta']=$check_jugador['camiseta'];
+                $_SESSION['edad']=$check_jugador['edad'];
+                $idEquipo = $check_equipo['equipo'];
+                $check_equipo=$check_equipo->query("SELECT * FROM equipos WHERE idEquipo='$idEquipo'");
+                $check_equipo->rowCount();
+                if($check_equipo->rowCount()===1){
+                    $check_equipo=$check_equipo->fetch();
+                    $_SESSION['equipo']=$check_equipo['nombre'];
+                }
             }
 
     		if(headers_sent()){
@@ -93,4 +110,5 @@
         ';
     }
     $check_user=null;
+    $check_jugador=null;
     $check_equipo=null;

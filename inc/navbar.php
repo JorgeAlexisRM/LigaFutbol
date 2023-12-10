@@ -1,7 +1,7 @@
 
   <!-- Contenido del encabezado -->
   <header>
-    <img class="logo" src="img/Laliga.webp" alt="Logo de la página">
+    <img class="logo" src="./img/Laliga.webp" alt="Logo de la página">
       <nav>
         <ul class="menu">
           <li><a href="index.php?vista=home">Inicio</a></li>
