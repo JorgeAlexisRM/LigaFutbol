@@ -3,7 +3,10 @@
 </div>
 <div class="contenedor">
     <div class="izquierda">
-        <?php require_once '../php/jugador_lista.php'; ?>
+        <?php
+            require_once "./php/main.php";
+            require_once './php/jugador_lista.php'; 
+        ?>
     </div>
     <div class="derecha">
         <form method="post">
@@ -11,13 +14,12 @@
                 <input placeholder="Ingresa el nombre..." type="text" id="nombre" name="nombre">
                 <button type="submit" value="Buscar" name="busqueda">Buscar Jugador</button>
             </div>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["busqueda"])) {
+                require_once './php/jugador_busqueda.php';
+            }
+        ?>
         </form>
         <br>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["busqueda"])) {
-            require_once '../php/jugador_busqueda.php';
-        }
-        ?>
     </div>
-    <?php require_once "../php/main.php"; ?>
 </div>
