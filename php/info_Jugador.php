@@ -34,9 +34,8 @@
                 $n+=1;
                 $item .= '<div class="item">
             <label>'.$jugador['posicion'].'</label>
-            <label>'.$jugador['edad'].' años'.'</label>
-            <a href="">Despedir</a>
-            <a href="">Transferir</a>
+            <label>'.$jugador['edad'].' años'.'</label>        
+            <a href="./php/despedir.php?idJugador='.$jugador['idJugador'].'">Despedir</a>
             </div>';
             
         }   
@@ -46,15 +45,15 @@
             $item.='<label class="nombreJu">'.$jugador['nombre'].' '.$jugador['apellido'].'</label>';
                 $n+=1;
                 $item .= '<div class="item">
-            <label>'.$jugador['posicion'].'</label>
             <label>'.$jugador['edad'].' años'.'</label>
-            <a href="">Despedir</a>
-            <a href="">Transferir</a>
+            <a href="./php/transferir.php?idJugador='.$jugador['idJugador'].'">Transferir</a>
             </div>';
             
         } 
     }
 
-    $conexion=null;
+    
     echo $item;
+
+    
 ?>
