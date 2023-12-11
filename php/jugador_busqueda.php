@@ -17,6 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
+            $idEquipo = $row['equipo'];
+            $consulta="SELECT * FROM equipos WHERE idEquipo='$idEquipo'";
+            $equipos = $conn->query($consulta);
+            $equipos = $equipos->fetch_assoc();
             $equipo = $row['equipo'];
             if ($equipo == null) {
                 if ($result_equipo->num_rows > 0) {
@@ -30,10 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			            <label>' . $row['equipo'] . '</label>
                         <label>' . $row['camiseta'] . '</label>
 			            <label>' . $row['posicion'] . '</label>
-			            <a href="index.php?vista=infoJugador&idJugador=' . $row['idJugador'] . '&idEquipo=' . $row['equipo'] . '">
-  				            <img src="../img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
-			            </a>
-                    </div>';
+			            ';
             } else {
                 $sql_equipo = "SELECT foto FROM equipos WHERE idequipo = '$equipo'";
                 $result_equipo = $conn->query($sql_equipo);
@@ -45,14 +46,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label>' . $row['nombre'] . '</label>
 			            <label>' . $row['apellido'] . '</label>
                         <label>' . $row['edad'] . ' años' . '</label>
-			            <label>' . $row['equipo'] . '</label>
+			            <label>' . $equipos['nombre'] . '</label>
                         <label>' . $row['camiseta'] . '</label>
 			            <label>' . $row['posicion'] . '</label>
-			        <a href="index.php?vista=infoJugador&idJugador=' . $row['idJugador'] . '&idEquipo=' . $row['equipo'] . '">
-  			        	<img src="../img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
-			        </a>
-                </div>';
+			        ';
             }
+            if(isset($_SESSION['rol'])&&($_SESSION['rol']==='administrador' || $_SESSION['rol']==='entrenador')){
+                $item.='<a href="index.php?vista=infoJugador&idJugador='. $row['idJugador'] .'&idEquipo='.$row['equipo'].'">
+                <img src="./img/inf.png" style="width: 35px; height: 35px; margin-top: 24px">
+                </a>
+                </div>';
+            }else{
+                $item.='</div>';
+            }
+
             echo $item;
         } else {
             echo '<h1 class="error">' . 'No se encontro al jugador' . '</h1>';
