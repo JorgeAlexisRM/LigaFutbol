@@ -4,8 +4,7 @@ require_once "main.php";
 // Obtén el idJugador desde la URL
 $idJugador = $_GET['idJugador'];
 $idEquipo = $_GET['idEquipo'];
-$camiseta =  isset($_GET['camiseta']) ? (int)$_GET['camiseta'] : 0;
-$posision= $_GET['posision'];
+$camiseta = (int) $_GET['camis'];
 
 $conexion=conexion();
 
@@ -17,7 +16,7 @@ if($consultaEquipo->rowCount()==1){
     $aux=$consultaEquipo['idEquipo'];
 }
 // Consulta SQL de UPDATE
-$sql = "UPDATE jugadores SET equipo ='$aux',camiseta=$camiseta ,posicion='$posision'  WHERE idJugador = '$idJugador'";
+$sql = "UPDATE jugadores SET equipo ='$aux',camiseta=$camiseta  WHERE idJugador = '$idJugador'";
 
 // Ejecutar la consulta
 $conexion->query($sql);
