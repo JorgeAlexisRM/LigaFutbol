@@ -51,18 +51,8 @@
             
         } 
     }
-} else {
-    $item .= ' <img class="imagenEqui" src="./img/equipo.png">';
-    if ($jugador->rowCount() == 1) {
-        $jugador = $jugador->fetch();
-        $item .= '<label class="nombreJu">' . $jugador['nombre'] . ' ' . $jugador['apellido'] . '</label>';
-        $item .= '<div class="item">
-                <label>' . $jugador['posicion'] . '</label>
-                <label>' . $jugador['edad'] . ' años' . '</label>
-                <a href="index.php?vista=transferencias.php&idJugador=' .$idJugador . '">Transferir</a>
-                </div>';
-    }
-}   
+
+    
     echo $item;
 
     
