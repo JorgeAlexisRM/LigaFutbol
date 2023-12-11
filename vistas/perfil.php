@@ -18,6 +18,12 @@
                     <label>Equipo: '.$_SESSION['equipo'].'</label>
                 </div>
                 </a>';
+        }elseif($_SESSION['rol']=='entrenador'){
+            $item .= '<a href="index.php?vista=equipo_new">
+                <div class="item">
+                    <label>CREAR equipo</label>
+                </div>
+                </a>';
         }
 
         if($_SESSION['rol']=='jugador'){
