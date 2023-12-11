@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
             <label>' . $row['camiseta'] . '</label>
 			<label>' . $row['posicion'] . '</label>
 			<a href="index.php?vista=infoJugador&idJugador=' . $row['idJugador'] . '&idEquipo=' . $equipo . '">
-  				<img src="../img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
+  				<img src="./img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
 			</a>
             </div>';
 		} else {
@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
             <label>' . $row['camiseta'] . '</label>
 			<label>' . $row['posicion'] . '</label>
 			<a href="index.php?vista=infoJugador&idJugador=' . $row['idJugador'] . '&idEquipo=' . $row['equipo'] . '">
-  				<img src="../img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
+  				<img src="./img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
 			</a>
             </div>';
 		}
