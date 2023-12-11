@@ -92,8 +92,15 @@
     if($contador===$nPartidos){
         echo '<div class="respuesta">
             <label>Se han jugado todos los partidos</label>
-            <button>Terminar Torneo</button>
         </div>';
+
+        if(isset($_SESSION['rol'])&&($_SESSION['rol']=='administrador')){
+            echo '<form class="FormularioAjax" method="POST" action="./php/finTorneo.php">
+            <button type="submit">
+                Terminar Torneo
+            </button>
+            </form>';
+        }
     }
 
     $conexion=null;
