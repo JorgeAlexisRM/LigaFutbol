@@ -34,16 +34,26 @@
                 $n+=1;
                 $item .= '<div class="item">
             <label>'.$jugador['posicion'].'</label>
-            <label>'.$jugador['edad'].' años'.'</label>
-            <a href="">Despedir</a>
-            <a href="">Transferir</a>
+            <label>'.$jugador['edad'].' años'.'</label>        
+            <a href="./php/despedir.php?idJugador='.$jugador['idJugador'].'">Despedir</a>
             </div>';
             
         }   
     }else{
-        $item.='<h1 class="titulo">Ocurrio algun error y no hay equipo que mostrar</h1>';
+        if($jugador->rowCount()==1){
+            $jugador = $jugador->fetch();
+            $item.='<label class="nombreJu">'.$jugador['nombre'].' '.$jugador['apellido'].'</label>';
+                $n+=1;
+                $item .= '<div class="item">
+            <label>'.$jugador['edad'].' años'.'</label>
+            <a href="index.php?vista=transferir&idJugador='.$jugador['idJugador'].'">Transferir</a>
+            </div>';
+            
+        } 
     }
 
-    $conexion=null;
+    
     echo $item;
+
+    
 ?>

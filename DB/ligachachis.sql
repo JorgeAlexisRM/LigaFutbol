@@ -31,7 +31,7 @@ CREATE TABLE `alineaciones` (
   `idJugador` varchar(60) NOT NULL,
   `idEquipo` varchar(60) NOT NULL,
   `camiseta` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -50,7 +50,7 @@ CREATE TABLE `equipos` (
   `perdidos` int NOT NULL,
   `foto` varchar(100) DEFAULT NULL,
   `idEntrenador` varchar(60) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `equipos`
@@ -78,7 +78,7 @@ CREATE TABLE `jugadores` (
   `camiseta` int NOT NULL,
   `posicion` varchar(60) NOT NULL,
   `idJugador` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `jugadores`
@@ -101,7 +101,7 @@ CREATE TABLE `partidos` (
   `jugado` tinyint(1) NOT NULL,
   `marcadorLocal` int NOT NULL,
   `marcadorVisitante` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `partidos`
@@ -134,7 +134,7 @@ CREATE TABLE `torneos` (
   `idTorneo` varchar(60) NOT NULL,
   `enjuego` tinyint(1) NOT NULL DEFAULT '0',
   `campeon` varchar(60) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `torneos`
@@ -151,12 +151,12 @@ INSERT INTO `torneos` (`idTorneo`, `enjuego`, `campeon`) VALUES
 
 CREATE TABLE `usuarios` (
   `idUsuario` varchar(60) NOT NULL,
-  `rol` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `contraseña` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `rol` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contraseña` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `username` varchar(60) NOT NULL,
   `nombre` varchar(60) NOT NULL,
   `apellido` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`

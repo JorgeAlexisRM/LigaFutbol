@@ -3,16 +3,27 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
   }
   
   .container {
     text-align: center;
+    margin-top: 100px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
   }
-  
+  .input-group1{
+    padding-left: 70px;
+  }
+  .input-group2{
+    padding-left: 60px;
+  }
+  .input-group3{
+    padding-left: 50px;
+  }
   h2 {
     margin-bottom: 20px;
   }
@@ -58,6 +69,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    display: block;
   }
   
   /* Clase para mostrar elementos ocultos */

@@ -4,11 +4,6 @@ body {
     background-position: center;
     background-attachment: scroll;
     background-size: cover;
-    
-}
-
-.cuerpoPartidos{
-    margin-bottom: 200px;
 }
 
 .titulo {
@@ -28,7 +23,7 @@ body {
     margin-top: 10px;
     border-radius: 24px;
     background: rgba(217, 217, 217, 0.20);
-    width: 50%;
+    width: 60%;
     display: flex;
 }
 
@@ -42,4 +37,14 @@ body {
 .item img {
     width: 50px;
     height: 50px;
+}
+.item a{
+    margin-top: 2px;
+    margin-right: 15px;
+    font-size: 30px;
+    color: #FFF;
+}
+.texto{
+    color: #FFF;
+    font-size: 32px;
 }
