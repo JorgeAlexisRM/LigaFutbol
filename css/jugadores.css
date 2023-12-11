@@ -9,11 +9,11 @@ body {
 .titulo {
   color: #FFF;
   text-align: left;
-  margin-left: 280px;
-  font-size: 72px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: -webkit-center;
 }
 .error {
   color: #FFF;
@@ -29,7 +29,7 @@ body {
   margin-top: 10px;
   border-radius: 24px;
   background: rgba(217, 217, 217, 0.20);
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: left;
 }
@@ -39,21 +39,24 @@ body {
   color: #FFF;
   font-size: 30px;
   margin-bottom: 0;
-  width: 75%;
+  width: 50%;
   text-align: center;
 }
 .contenedor {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: -webkit-center;
 }
 
 .izquierda {
-  width: 2500px;
-  margin-left: 40px;
+  width: 80%;
+  margin: auto;
 }
 
 .derecha {
-  width: 2500px;
+  width: 80%;
+  margin-top: 3%;
+  text-align: -webkit-center;
 }
 
 .search {
