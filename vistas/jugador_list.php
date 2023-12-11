@@ -12,7 +12,7 @@
         <form method="post">
             <div class="search">
                 <input placeholder="Ingresa el nombre..." type="text" id="nombre" name="nombre">
-                <button type="submit" value="Buscar" name="busqueda">Buscar Jugador</button>
+                <button type="submit" value="Buscar" name="busqueda">Buscar</button>
             </div>
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["busqueda"])) {
