@@ -47,11 +47,11 @@
     </div>
 
     <form id="login-form" class="hidden" method="POST" action="">
-      <div class="input-group">
+      <div class="input-group5">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username">
       </div>
-      <div class="input-group">
+      <div class="input-group4">
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password">
       </div>

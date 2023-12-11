@@ -24,6 +24,12 @@ body {
   .input-group3{
     padding-left: 50px;
   }
+  .input-group4{
+    padding-right: 80px;
+  }
+  .input-group5{
+    padding-right: 50px;
+  }
   h2 {
     margin-bottom: 20px;
   }
