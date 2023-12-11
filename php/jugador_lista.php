@@ -22,10 +22,15 @@ if ($result->num_rows > 0) {
 			<label>' .'Sin Equipo'.'</label>
             <label>' . $row['camiseta'] . '</label>
 			<label>' . $row['posicion'] . '</label>
-			<a href="index.php?vista=infoJugador&idJugador=' . $row['idJugador'] . '&idEquipo=' . $equipo . '">
-  				<img src="../img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
-			</a>
-            </div>';
+			';
+			if(isset($_SESSION['rol'])&&($_SESSION['rol']==='administrador' || $_SESSION['rol']==='entrenador')){
+				$item.='<a href="index.php?vista=infoJugador&idJugador='. $row['idJugador'] .'&idEquipo='.$row['equipo'].'">
+				<img src="./img/inf.png" style="width: 35px; height: 35px; margin-top: 24px">
+				</a>
+				</div>';
+			}else{
+				$item.='</div>';
+			}
 		} else {
 			$sql_equipo = "SELECT foto FROM equipos WHERE idequipo = '$equipo'";
 			$result_equipo = $conn->query($sql_equipo);
@@ -40,10 +45,15 @@ if ($result->num_rows > 0) {
 			<label>' . $row['equipo'] . '</label>
             <label>' . $row['camiseta'] . '</label>
 			<label>' . $row['posicion'] . '</label>
-			<a href="index.php?vista=infoJugador&idJugador=' . $row['idJugador'] . '&idEquipo=' . $row['equipo'] . '">
-  				<img src="../img/inf.png" style="width: 35px; height: 35px; margin-top: 11px">
-			</a>
-            </div>';
+			';
+			if(isset($_SESSION['rol'])&&($_SESSION['rol']==='administrador' || $_SESSION['rol']==='entrenador')){
+				$item.='<a href="index.php?vista=infoJugador&idJugador='. $row['idJugador'] .'&idEquipo='.$row['equipo'].'">
+				<img src="./img/inf.png" style="width: 35px; height: 35px; margin-top: 24px">
+				</a>
+				</div>';
+			}else{
+				$item.='</div>';
+			}
 		}
 	}
 	echo $item;
