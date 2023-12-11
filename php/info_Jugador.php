@@ -46,7 +46,7 @@
                 $n+=1;
                 $item .= '<div class="item">
             <label>'.$jugador['edad'].' años'.'</label>
-            <a href="./php/transferir.php?idJugador='.$jugador['idJugador'].'">Transferir</a>
+            <a href="index.php?vista=transferir&idJugador='.$jugador['idJugador'].'">Transferir</a>
             </div>';
             
         } 
