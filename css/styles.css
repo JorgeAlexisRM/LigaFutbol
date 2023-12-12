@@ -68,6 +68,11 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: auto;
+  background-color: #f1e3e3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
 }
 main {
   margin-bottom: 100px;

@@ -1,85 +1,105 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  .container {
-    text-align: center;
-    margin-top: 100px;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    border: 1px solid;
-  }
-  .input-group1{
-    padding-left: 70px;
-  }
-  .input-group2{
-    padding-left: 60px;
-  }
-  .input-group3{
-    padding-left: 50px;
-  }
-  .input-group4{
-    padding-right: 80px;
-  }
-  .input-group5{
-    padding-right: 50px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  
-  .radio-group {
-    margin-bottom: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #3498db;
-    color: white;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-  
-  input[type="radio"] {
-    margin-right: 10px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-image: url("../img/campo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+main {
+  margin-bottom: 160px;
+}
+.container {
+  text-align: center;
+  margin-top: 100px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  border: 1px;
+  border-radius: 10px;
+  color: #0f0e0e;
+  background-color: rgba(217, 217, 217, 0.20);
+}
+#registro-form {
+  padding-top: 10px;
+}
+
+#login-form {
+  padding-top: 10px;
+}
+
+.input-group1 {
+  padding-left: 70px;
+}
+
+.input-group2 {
+  padding-left: 60px;
+}
+
+.input-group3 {
+  padding-left: 50px;
+}
+
+.input-group4 {
+  padding-right: 80px;
+}
+
+.input-group5 {
+  padding-right: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+.btnMulti {
+  padding: 5px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+}
+
+.btnMulti:hover {
+  background-color: #2980b9;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
 /* Estilos para el modal */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    display: block;
-  }
-  
-  /* Clase para mostrar elementos ocultos */
-  .hidden {
-    display: none;
-  }
-  
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+}
+
+/* Clase para mostrar elementos ocultos */
+.hidden {
+  display: none;
+}

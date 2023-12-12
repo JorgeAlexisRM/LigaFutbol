@@ -1,12 +1,15 @@
-.cuerpoTabla{
+.cuerpoTabla {
     background-image: url('../img/campo.jpg');
-    background-size: cover; 
+    background-repeat: no-repeat;
     background-position: center;
-
+    background-attachment: scroll;
+    background-size: cover;
+    margin-bottom: 150px;
 }
+
 .table-container {
-    margin: 0 auto; 
-    width: 80%; 
+    margin: 0 auto;
+    width: 80%;
     border: 1px solid #ddd;
 }
 
@@ -14,43 +17,50 @@
     border-collapse: collapse;
     width: 100%;
     font-family: Arial, sans-serif;
-    color: #ebe2e2;;
+    color: #ebe2e2;
+    ;
     background-color: #383636;
 }
+
 .tbody1 {
     border-collapse: collapse;
     width: 100%;
     font-family: Arial, sans-serif;
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     border: none;
     padding: 8px;
     text-align: center;
 }
 
-th:nth-child(1), td:nth-child(1) {
-    width: 30px; 
+th:nth-child(1),
+td:nth-child(1) {
+    width: 30px;
 }
 
-th:nth-child(2), td:nth-child(2) {
+th:nth-child(2),
+td:nth-child(2) {
     display: flex;
     justify-content: left;
 }
 
 tr {
-    border-bottom: 1px solid #ddd; 
-    color: #ebe2e2;;
+    border-bottom: 1px solid #ddd;
+    color: #ebe2e2;
+    ;
     background-color: #383636;
 }
 
 tr:last-child {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
 th {
-    color: #ebe2e2;;
+    color: #ebe2e2;
+    ;
     background-color: #383636;
 }
 

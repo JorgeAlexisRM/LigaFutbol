@@ -5,7 +5,9 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-
+main {
+  margin-bottom: 160px;
+}
 .titulo {
   color: #FFF;
   text-align: left;
@@ -79,11 +81,15 @@ body {
   border: none;
   color: #fff;
   cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 8px 15px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   right: 0;
   transition: .9s ease;
+}
+.btnSearch{
+  width: 100px;
+  height: 45px;
 }
