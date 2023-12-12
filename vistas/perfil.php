@@ -1,3 +1,4 @@
+<main>
 <div>
     <h1 class="titulo">PERFIL</h1>
 </div>
@@ -24,6 +25,12 @@
                     <label>CREAR equipo</label>
                 </div>
                 </a>';
+
+            $item .= '<a href="index.php?vista=elegir_equipo&idEntrenador='.$_SESSION['id'].'">
+            <div class="item">
+                <label>Seleccionar Equipo Existente</label>
+            </div>
+            </a>';
         }
 
         if($_SESSION['rol']=='jugador'){
@@ -48,3 +55,4 @@
         echo $item;
     ?>
 </div>
+</main>

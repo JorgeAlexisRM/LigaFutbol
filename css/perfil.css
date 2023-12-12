@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+.main{
+    margin-bottom: 100px;
+}
+
 .titulo {
     color: #FFF;
     text-align: center;

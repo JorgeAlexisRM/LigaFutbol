@@ -1,3 +1,4 @@
+<main>
 <div>
     <h1 class="titulo">Liga</h1>
 </div>
@@ -21,4 +22,5 @@
         Guardar Jornada
     </button>
 </form>
+</main>
 
