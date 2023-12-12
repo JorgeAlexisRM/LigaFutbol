@@ -3,23 +3,23 @@
     <h1 class="titulo">PERFIL</h1>
 </div>
 
-<div class="datosUsuario">
-    <img src="./img/equipo.png">
+    <div class="datosUsuario">
+        <img src="./img/equipo.png">
 
-    <?php
-        $item="";
+        <?php
+        $item = "";
 
-        $item .= '<div class="item"><label>Nombre: '.$_SESSION['nombre'].'</label></div>
-            <div class="item"><label>Apellidos: '.$_SESSION['apellido'].'</label></div>
-            <div class="item"><label>ROL: '.$_SESSION['rol'].'</label></div>';
-        
-        if(isset($_SESSION['equipo'])&&$_SESSION['rol']=='entrenador'){
-            $item .= '<a href="index.php?vista=plantilla&idEquipo='.$_SESSION['idEquipo'].'">
-                <div class="item">
-                    <label>Equipo: '.$_SESSION['equipo'].'</label>
+        $item .= '<div class="item1"><label class="itemlabel">Nombre: ' . $_SESSION['nombre'] . '</label></div>
+            <div class="item1"><label class="itemlabel">Apellidos: ' . $_SESSION['apellido'] . '</label></div>
+            <div class="item1"><label class="itemlabel">ROL: ' . $_SESSION['rol'] . '</label></div>';
+
+        if (isset($_SESSION['equipo']) && $_SESSION['rol'] == 'entrenador') {
+            $item .= '<a href="index.php?vista=plantilla&idEquipo=' . $_SESSION['idEquipo'] . '">
+                <div class="item1">
+                    <label>Equipo: ' . $_SESSION['equipo'] . '</label>
                 </div>
                 </a>';
-        }elseif($_SESSION['rol']=='entrenador'){
+        } elseif ($_SESSION['rol'] == 'entrenador') {
             $item .= '<a href="index.php?vista=equipo_new">
                 <div class="item">
                     <label>CREAR equipo</label>
@@ -33,26 +33,26 @@
             </a>';
         }
 
-        if($_SESSION['rol']=='jugador'){
-            $item .= '<div class="item"><label>Edad: '.$_SESSION['edad'].'</label></div>
-                <div class="item"><label>Posicion: '.$_SESSION['posicion'].'</label></div>
-                <div class="item"><label>Camiseta: '.$_SESSION['camiseta'].'</label></div>';
+        if ($_SESSION['rol'] == 'jugador') {
+            $item .= '<div class="item1"><label class="itemlabel">Edad: ' . $_SESSION['edad'] . '</label></div>
+                <div class="item1"><label class="itemlabel">Posicion: ' . $_SESSION['posicion'] . '</label></div>
+                <div class="item1"><label class="itemlabel">Camiseta: ' . $_SESSION['camiseta'] . '</label></div>';
 
-            if(isset($_SESSION['equipo'])){
+            if (isset($_SESSION['equipo'])) {
                 $item .= '
                     <div class="item">
-                        <label>Equipo: '.$_SESSION['equipo'].'</label>
+                        <label>Equipo: ' . $_SESSION['equipo'] . '</label>
                     </div>';
             }
 
-            $item.='<a href="index.php?vista=editar_jugador&idJugador='.$_SESSION['id'].'">
-                <div class="item">
-                    <label>Editar</label>
+            $item .= '<a href="index.php?vista=editar_jugador&idJugador=' . $_SESSION['id'] . '">
+                <div class="item1">
+                    <label class="itemlabel1">Editar</label>
                 </div>
                 </a>';
         }
 
         echo $item;
-    ?>
-</div>
+        ?>
+    </div>
 </main>
