@@ -12,25 +12,27 @@
 
         echo '<form action="./php/actualizar_jugador.php" class="FormularioAjax" method="POST" autocomplete="off" enctype="multipart/form-data" >
         <div class="idJugador">
+        <label>Id Usuario: </label>
             <input name="idJugador" type="text" value="'.$jugador['idJugador'].'" readonly>
-        </div
+        </div>
         <div class="nombre">
             <label>Nombre: </label>
             <input name="nombre" type="text" value="'.$jugador['nombre'].'" readonly>
         </div>
         <div class="apellido">
-            <label>Equipo Visitante: </label>
+            <label>Apellido: </label>
             <input name="apellido" type="text" value="'.$jugador['apellido'].'" readonly>
         </div>
         <div class="edad">
+        <label>Edad: </label>
             <input name="edad" type="number">
         </div>
         <div class="posicion">
+        <label>Posicion: </label>
             <input name="posicion" type="text">
         </div>
-        <p>
-            <button type="submit">Actualizar Datos</button>
-        </p>
+            <button class="btnMulti" type="submit">Actualizar Datos</button>
         </form>
         ';
     }
+    ?>
