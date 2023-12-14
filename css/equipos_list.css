@@ -3,7 +3,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: scroll;
-    background-size: 100%;
+    background-size: cover;
+}
+
+main {
+    margin-bottom: 160px;
 }
 
 .titulo {
@@ -15,7 +19,7 @@ body {
     line-height: normal;
 }
 
-.listaEquipos{
+.listaEquipos {
     text-align: -webkit-center;
 }
 
@@ -39,12 +43,12 @@ body {
     height: 50px;
 }
 
-.jornada{
+.jornada {
     text-align: center;
 }
 
-.jornada button{
-    border: solid 5px black ;
+.jornada button {
+    border: solid 5px black;
     border-radius: 10px;
     background-color: antiquewhite;
 }

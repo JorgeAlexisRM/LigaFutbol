@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+main {
+    margin-bottom: 160px;
+}
+
 .titulo {
     color: #FFF;
     text-align: center;
@@ -15,7 +19,11 @@ body {
     line-height: normal;
 }
 
-.listaPartidos{
+.main{
+    margin-bottom: 100px;
+}
+
+.listaPartidos {
     text-align: -webkit-center;
 }
 

@@ -1,6 +1,6 @@
 <main>
     <div>
-        <h1 class="titulo">Informacion del Jugador</h1>
+        <h1 class="titulo">Transferir</h1>
     </div>
 
     <div class="listaPartidos">
@@ -8,7 +8,7 @@
         require_once "./php/main.php";
 
         # Paginador categoria #
-        require_once "./php/info_Jugador.php";
+        require_once "./php/transferir.php";
         ?>
     </div>
 </main>

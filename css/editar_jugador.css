@@ -1,0 +1,50 @@
+body {
+    background-image: url("../img/campo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+main {
+    margin-bottom: 160px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.FormularioAjax{
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(217, 217, 217, 0.20);
+    font-family: Arial, sans-serif;
+}
+.btnMulti {
+    padding: 5px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    margin-left: 80px;
+  }
+  
+  .btnMulti:hover {
+    background-color: #2980b9;
+  }
+  .nombre{
+    padding-left: 13px;
+  }
+  .apellido{
+    padding-left: 13px;
+  }
+  .edad{
+    padding-left: 30px;
+  }
+  .posicion{
+    padding-left: 5px;
+  }
