@@ -1,7 +1,7 @@
 <?php
 // Simula la conexión y obtención de datos desde la base de datos
 require_once "main.php";
-if(isset($_SESSION['id'])&&$_SESSION['rol']=='entrenador'){
+if(isset($_SESSION['id'])&& $_SESSION['rol']=='entrenador'){
     $idEntrenador=$_SESSION['id'] ;
     $idEquip="";
     $conexion = conexion();
@@ -17,10 +17,10 @@ if(isset($_SESSION['id'])&&$_SESSION['rol']=='entrenador'){
 
 
     $etiqueta.= '
-        <form method="post" action="">
+        <form method="POST" action="./php/transfiriendoEntrenador.php?idJugador=$idJugador&idEquipo=$idEquip&cami=$camiseta" class="FormularioAjax">
             <label for="cami" class="texto">Camiseta:</label>
             <input type="text" id="cami" name="camiseta">
-            <button type="submit" name="submit">Mostrar Equipo</button>
+            <button type="submit">Mostrar Equipo</button>
         </form>';
 
     echo $etiqueta;
@@ -40,7 +40,7 @@ if(isset($_SESSION['id'])&&$_SESSION['rol']=='entrenador'){
                 header("Location: ./php/transfiriendoEntrenador.php?idJugador=$idJugador&idEquipo=$idEquip&cami=$camiseta");
             }
         }
-         }
+    }
     
 }elseif($_SESSION['rol']=='administrador'){
     $conexion = conexion();
@@ -53,7 +53,7 @@ if(isset($_SESSION['id'])&&$_SESSION['rol']=='entrenador'){
 
 
     $etiqueta.= '
-        <form method="post" action="">
+        <form method="post" action="./php/transfiriendo.php?idJugador=$idJugador&idEquipo=$equipoSeleccionado&camis=$camiseta" class="FormularioAjax">
             <!-- Input de tipo text con atributo list -->
             <label for="equipos" class="texto">Selecciona un equipo:</label>
             <input type="text" id="equipos" name="equipo" list="listaEquipos">
@@ -81,6 +81,5 @@ if(isset($_SESSION['id'])&&$_SESSION['rol']=='entrenador'){
     }
 }
 
-?>
 
 

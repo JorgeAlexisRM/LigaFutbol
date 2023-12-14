@@ -18,10 +18,13 @@
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["busqueda"])) {
                     require_once './php/jugador_busqueda.php';
+                }elseif($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["PDF"])){
+                    require_once './php/jugador_pdf.php';
                 }
                 ?>
             </form>
             <br>
         </div>
+        <button onclick="window.location.href='./php/jugador_pdf.php'">Generar PDF</button>
     </div>
 </main>
