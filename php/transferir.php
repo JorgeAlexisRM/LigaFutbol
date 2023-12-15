@@ -1,6 +1,7 @@
 <?php
 // Simula la conexión y obtención de datos desde la base de datos
 require_once "main.php";
+
 if(isset($_SESSION['id'])&& $_SESSION['rol']=='entrenador'){
     $idEntrenador=$_SESSION['id'] ;
     $idEquip="";
@@ -17,30 +18,15 @@ if(isset($_SESSION['id'])&& $_SESSION['rol']=='entrenador'){
 
 
     $etiqueta.= '
-        <form method="POST" action="./php/transfiriendoEntrenador.php?idJugador=$idJugador&idEquipo=$idEquip&cami=$camiseta" class="FormularioAjax">
+        <form method="POST" action="./php/transfiriendoEntrenador.php" class="FormularioAjax">
+            <input name="idEquipo" value="'.$_SESSION['idEquipo'].'" readonly>
+            <input name="idJugador" value="'.$idJugador.'" readonly>
             <label for="cami" class="texto">Camiseta:</label>
-            <input type="text" id="cami" name="camiseta">
+            <input type="number" id="cami" name="camiseta">
             <button type="submit">Mostrar Equipo</button>
         </form>';
 
     echo $etiqueta;
-    // Manejar la selección del equipo cuando se envía el formulario
-    if (isset($_POST['submit'])) {
-        
-        $camiseta = (int)$_POST['camiseta'];
-        //echo "idJugador: '$idJugador' idEquipo: '$idEquip' camiseta: $camiseta";
-        $consulta = $conexion->query("SELECT * FROM jugadores WHERE equipo='$idEquip'");
-        $consulta=$consulta->fetchAll();
-        foreach ($consulta as $equipo) {
-            $aux=(int)$equipo['camiseta'];
-            if($aux==$camiseta){
-                echo  '<h1>Esa camiseta esta ocupada, elige otra</h1>';
-            }else{
-                echo "idJugador='$idJugador'&idEquipo='$idEquip'&camiseta='$camiseta'";
-                header("Location: ./php/transfiriendoEntrenador.php?idJugador=$idJugador&idEquipo=$idEquip&cami=$camiseta");
-            }
-        }
-    }
     
 }elseif($_SESSION['rol']=='administrador'){
     $conexion = conexion();
