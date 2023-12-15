@@ -5,6 +5,9 @@ body {
     background-attachment: scroll;
     background-size: cover;
 }
+main{
+    margin-bottom: 160px;
+}
 
 .titulo {
     color: #FFF;

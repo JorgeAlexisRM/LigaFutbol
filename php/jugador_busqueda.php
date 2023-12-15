@@ -49,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			            <label>' . $equipos['nombre'] . '</label>
                         <label>' . $row['camiseta'] . '</label>
 			            <label>' . $row['posicion'] . '</label>
+
 			        ';
             }
             if(isset($_SESSION['rol'])&&($_SESSION['rol']==='administrador' || $_SESSION['rol']==='entrenador')){
@@ -58,6 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>';
             }else{
                 $item.='</div>';
+
             }
 
             echo $item;
