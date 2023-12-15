@@ -3,6 +3,8 @@
         <h1 class="titulo">Transferir</h1>
     </div>
 
+    <div class="form-rest"></div>
+
     <div class="listaPartidos">
         <?php
         require_once "./php/main.php";
